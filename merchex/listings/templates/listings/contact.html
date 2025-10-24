@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+</head>
+<body>
+    <header>
+        <h1>Contactez-nous</h1>
+        <p>Nous sommes à votre écoute</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Envoyez-nous un message</h2>
+            <form action="/contact" method="POST">
+                <div>
+                    <label for="name">Nom complet :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="phone">Téléphone :</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div>
+                    <label for="subject">Sujet :</label>
+                    <select id="subject" name="subject">
+                        <option value="">Choisissez un sujet</option>
+                        <option value="info">Demande d'information</option>
+                        <option value="support">Support technique</option>
+                        <option value="partnership">Partenariat</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Envoyer le message</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>Nos coordonnées</h2>
+            <address>
+                <p><strong>Adresse :</strong><br>
+                123 Rue de l'Exemple<br>
+                75000 Paris, France</p>
+
+                <p><strong>Téléphone :</strong><br>
+                +33 1 23 45 67 89</p>
+
+                <p><strong>Email :</strong><br>
+                contact@example.com</p>
+
+                <p><strong>Horaires d'ouverture :</strong><br>
+                Lundi - Vendredi : 9h00 - 18h00<br>
+                Samedi : 10h00 - 16h00</p>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Votre Société. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
