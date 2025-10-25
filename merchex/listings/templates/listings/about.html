@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos - Notre Entreprise</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="about.html">À propos</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <h1>À propos de nous</h1>
-    </header>
+{% extends 'listings/base.html' %}
+
+{% block content %}
 
     <main>
         <section>
@@ -92,9 +79,4 @@
         </section>
     </main>
 
-    <footer>
-        <p>Rejoignez-nous dans notre mission ! <a href="contact.html">Contactez-nous</a> dès aujourd'hui.</p>
-        <p>&copy; 2025 Notre Entreprise. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
+{% endblock %}
