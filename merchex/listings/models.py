@@ -20,6 +20,8 @@ class Band(models.Model):
     
     def __str__(self):
         return f'{self.name}'
+    
+    
         
 class Listing(models.Model):
     class Type(models.TextChoices):
@@ -34,5 +36,7 @@ class Listing(models.Model):
     year = models.fields.IntegerField(
     validators=[MinValueValidator(1900), MaxValueValidator(2021)])
     type = models.fields.CharField(choices=Type.choices, max_length=5)
+    band = models.ForeignKey(Band, null=True, on_delete=models.SET_NULL)
+   
     
     
