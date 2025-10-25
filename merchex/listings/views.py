@@ -11,17 +11,17 @@ def hello(request):
 def about(request):
     return render(request, 'listings/about.html')
 
-def listings(request):
-    listings = Listing.objects.all()
-    return HttpResponse(f"""
-        <h1>Hello Django !</h1>
-        <p>Mes titres préférés sont :<p>
-        <ul>
-            <li>{listings[0].title}</li>
-            <li>{listings[1].title}</li>
-            <li>{listings[2].title}</li>
-        </ul>
-""")
+# def listings(request):
+#     listings = Listing.objects.all()
+#     return HttpResponse(f"""
+#         <h1>Hello Django !</h1>
+#         <p>Mes titres préférés sont :<p>
+#         <ul>
+#             <li>{listings[0].title}</li>
+#             <li>{listings[1].title}</li>
+#             <li>{listings[2].title}</li>
+#         </ul>
+# """)
 
 def contact(request):
     return render(request, 'listings/contact.html')

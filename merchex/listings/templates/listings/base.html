@@ -1,11 +1,17 @@
+{% load static %}
+
 <html>
-    <head><title>Merchex</title></head>
+    <head>
+        <title>Merchex</title>
+         <link rel="stylesheet" href="{% static 'listings/styles.css' %}" />
+    </head>
     <body>
          <header>
         <nav>
-            <a href="hello/">Accueil</a>
-            <a href="about-us/">À propos</a>
-            <a href="contact.html">Contact</a>
+            <a href="{% url 'hello' %}">Accueil</a>
+            <a href="{% url 'about-us' %}">À propos</a>
+            <a href="{% url 'contact-us' %}">Contact</a>
+            
         </nav>
         <h1>À propos de nous</h1>
     </header>
