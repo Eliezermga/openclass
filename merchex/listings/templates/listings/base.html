@@ -8,12 +8,12 @@
     <body>
          <header>
         <nav>
-            <a href="{% url 'hello' %}">Accueil</a>
+            <a href="{% url 'band-list' %}">Groupes</a>
+            <a href="{% url 'listing-list' %}">Annonces</a>
             <a href="{% url 'about-us' %}">À propos</a>
             <a href="{% url 'contact-us' %}">Contact</a>
             
         </nav>
-        <h1>À propos de nous</h1>
     </header>
 
         {% block content %}{% endblock %}

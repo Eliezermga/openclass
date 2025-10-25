@@ -1,0 +1,23 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+    <h1>Annonces</h1>
+
+    <p>Nous avons {{ listings|length }} annonce{{ listings|length|pluralize }} disponibles :</p>
+
+    <ul>
+        {% for listing in listings %}
+            <li>
+                <a href="{% url 'listing-detail' listing.id %}">{{ listing.title }}</a>
+                - {{ listing.get_type_display }}
+                {% if listing.sold %}
+                    <span style="color: red;">[VENDUS]</span>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>Aucune annonce disponible pour le moment.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
