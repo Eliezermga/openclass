@@ -1,0 +1,18 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <header>
+        <h1>Ajouter votre groupe preferé</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Envoyer">
+            </form>
+                        
+        </section>
+    </main>
+{% endblock %}
