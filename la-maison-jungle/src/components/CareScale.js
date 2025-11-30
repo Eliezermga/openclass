@@ -13,5 +13,4 @@ function CareScale(props) {
     )
 }
 
-
 export default CareScale
